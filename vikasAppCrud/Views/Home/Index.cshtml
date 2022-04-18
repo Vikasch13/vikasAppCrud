@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<vikasAppCrud.Models.VikasModel>
+
+<table class="table">
+    <tr>
+
+        <th>name</th>
+        <th>email</th>
+        <th>mobileno</th>
+        <th>salary</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Mobileno</td>
+            <td>@item.Salary</td>
+
+            <td><a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a></td>
+            <td><a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a></td>
+
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model vikasAppCrud.Models.VikasModel
+
+<form asp-controller="Home" asp-action="AddData">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="row">
+
+        <label>Name</label>
+        <input placeholder="Name" class="form-control" asp-for="Name" required="required" />
+
+    </div>
+
+    <div class="row">
+
+        <label>Email</label>
+        <input placeholder="Email" class="form-control" asp-for="Email" required="required" />
+
+    </div>
+    <div class="row">
+
+        <label>Mobile No.</label>
+        <input placeholder="Mobile No." class="form-control" asp-for="Mobileno" required="required" />
+
+    </div>
+
+    <div class="row">
+
+        <label>Salary</label>
+        <input placeholder="Salary" class="form-control" asp-for="Salary" required="required" />
+
+    </div>
+
+    <br />
+
+
+    <button class="btn btn-success" value="submit">Submit</button>
+
+</form>
